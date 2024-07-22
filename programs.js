@@ -163,6 +163,35 @@ console.log("interseciton====",intArr)
 console.log("union =====",newArr)
 
 
+10- Find Subarray with given Sum from Array of non-negative Numbers
+// Input: arr[] = { 15, 2, 4, 8, 9, 5, 10, 23}, sum = 23
+// Output: 2 5
+// Explanation: Sum of elements between indices 2 and 5 is 2 + 4 + 8 + 9 = 23
+
+
+let arr= [1, 4, 0, 0, 3, 10, 5];
+
+let sum = 7;
+let index1=-1;
+let index2=-1;
+for(let i=0; i<arr.length; i++){
+    let currentSum=0
+    for(let j = i; j<arr.length;j++){
+        currentSum += arr[j]
+        if(currentSum===sum){
+            index1=i;
+            index2=j;
+            break;
+        }
+    }
+    if(index1 !==-1 || index2 !==-1){
+        break;
+    }
+    
+}
+console.log([index1+1,index2+1])
+
+
 
 
 
