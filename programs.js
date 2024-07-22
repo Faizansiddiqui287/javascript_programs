@@ -191,7 +191,14 @@ for(let i=0; i<arr.length; i++){
 }
 console.log([index1+1,index2+1])
 
+11- Write a program to cyclically rotate an array by one
 
+let arr= [1, 2, 3, 4, 5];
+let lastElem = arr.length-1
+let elem = arr[lastElem]
+arr.splice(lastElem,1)
+arr.unshift(elem)
+console.log(arr)
 
 
 
