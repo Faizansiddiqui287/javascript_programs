@@ -200,6 +200,66 @@ arr.splice(lastElem,1)
 arr.unshift(elem)
 console.log(arr)
 
+12 - Find the element if K is 4 what will be the the least number in 4th position
 
+let arr= [7, 10, 4, 3, 20, 15];
+let k = 4
+
+for(let i = 0; i<arr.length; i++){
+    for(j=1;j<arr.length;j++){
+        if(arr[i]<arr[j]){
+            let temp = arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp
+        }
+    }
+}
+
+console.log(arr[k])
+
+13 -Given an array of N integers, and an integer K, the task is to find the number of pairs of integers in the array whose sum is equal to K.
+
+
+Input: arr[] = {1, 5, 7, -1}, K = 6
+Output:  2
+Explanation: Pairs with sum 6 are (1, 5) and (7, -1).
+
+Input: arr[] = {1, 5, 7, -1, 5}, K = 6
+Output:  3
+Explanation: Pairs with sum 6 are (1, 5), (7, -1) & (1, 5). 
+
+
+let arr = [1, 1, 1, 1];
+let num = 2;
+let pair=[]
+let count = 0;
+for(let i=0;i<arr.length;i++){
+    for(let j=i+1; j<arr.length;j++){
+        if(arr[i] + arr[j]===num){
+            pair.push([arr[i],arr[j]])
+            count ++
+        }
+    }
+}
+
+console.log(count);
+
+
+14- Find duplicates-
+Input: n=7 , array[]={1, 2, 3, 6, 3, 6, 1}
+Output: 1, 3, 6
+Explanation: The numbers 1 , 3 and 6 appears more than once in the array.
+let arr = [1, 2, 3, 4 ,3];
+let numArr = []
+
+for(let i=0;i<arr.length;i++){
+    for(let j=i+1; j<arr.length;j++){
+        if(arr[i] === arr[j]){
+         numArr.push(arr[i])
+        }
+    }
+}
+
+console.log(numArr);
 
 
