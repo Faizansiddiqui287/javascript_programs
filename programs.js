@@ -262,4 +262,23 @@ for(let i=0;i<arr.length;i++){
 
 console.log(numArr);
 
+15 - Find the first repeating element in an array of integers
+
+let arr = [10, 5, 3, 4, 3, 5, 6];
+let numArr = []
+let num;
+for(let i=0;i<arr.length;i++){
+    let flag
+    for(let j=i+1; j<arr.length;j++){
+        if(arr[i] === arr[j]){
+            num =arr[i]
+            flag = true;
+        }
+    }
+    if(flag) {
+        break
+    }
+}
+
+console.log(num);
 
